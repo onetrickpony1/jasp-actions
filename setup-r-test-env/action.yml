@@ -236,7 +236,7 @@ runs:
     - uses: r-lib/actions/setup-renv@v2
       if: inputs.packages == 'lockfile'
       with:
-        cache-version: 7
+        cache-version: 9
 
     - name: Install jaspTools if missing from lockfile
       if: inputs.packages == 'lockfile'
