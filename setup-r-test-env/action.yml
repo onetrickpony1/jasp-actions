@@ -33,6 +33,7 @@ runs:
         VDIFFR_RUN_TESTS=true
         RENV_CONFIG_INSTALL_JOBS=1
         RENV_CONFIG_INSTALL_STAGED=false
+        RENV_CONFIG_INSTALL_KEEP_SOURCE=false
         RENV_CONFIG_REPOS_OVERRIDE=https://packagemanager.posit.co/cran/latest
         RENV_CONFIG_PAK_ENABLED=false
         RENV_CONFIG_INSTALL_VERBOSE=true
@@ -235,7 +236,7 @@ runs:
     - uses: r-lib/actions/setup-renv@v2
       if: inputs.packages == 'lockfile'
       with:
-        cache-version: 6
+        cache-version: 7
 
     - name: Install jaspTools if missing from lockfile
       if: inputs.packages == 'lockfile'
